@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Interface</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      header {
+        background-color: #003366;
+        padding: 10px;
+        text-align: right;
+        padding-right: 40px;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .nav-bar {
+        background-color: #ffcc00;
+        padding: 10px;
+        display: flex;
+        justify-content: start;
+        padding-left: 80px;
+      }
+      .nav-bar a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+      .container {
+        width: 60%;
+        margin: 20px auto;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-top: 40px solid #003366;
+      }
+      .message-section {
+        margin-bottom: 20px;
+      }
+      .message-section label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #f0f0f0;
+        margin-top: -40px;
+      }
+      .message-section textarea {
+        width: 90%;
+        height: 100px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-image: repeating-linear-gradient(
+          to bottom,
+          #fff 0,
+          #fff 19px,
+          #eaeaea 19px,
+          #eaeaea 20px
+        );
+        resize: none; /* Disable resizing */
+      }
+      .message-section img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      .send-btn {
+        background-color: #003366;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .footer {
+        display: flex;
+        align-items: start;
+        background-color: #003366;
+        color: white;
+        text-align: left;
+        padding: 10px 0;
+        margin-top: 20px;
+        padding-left: 80px;
+      }
+
+      #home-icon {
+        width: 20px;
+      }
+      .header-container {
+        align-items: center; /* Vertically center-align the items */
+        justify-content: end; /* Horizontally center-align the items */
+        padding-right: 80px; /* Adds some space between the image and the text */
+      }
+      .nav-icon {
+        height: 15px;
+      }
+      nav a {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-right: 15px;
+      }
+      .send-btn {
+        height: 40px;
+        border-radius: 30px;
+        display: flex;
+        margin-top: -60px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img src="images/home.png" id="home-icon" alt="" />
+        <a href="#">Home</a>
+      </div>
+    </header>
+
+    <nav class="nav-bar">
+      <a href="#"><img class="nav-icon" src="images/arrow.png" /> Students</a>
+      <a href="#"><img class="nav-icon" src="images/arrow.png" /> Section</a>
+      <a href="#"
+        ><img class="nav-icon" src="images/arrow.png" /> Instructor's Name</a
+      >
+      <a href=""><img class="nav-icon" src="images/arrow.png" /> Emails</a>
+      <a href="mailto:surname-fn@student.national-u.edu.ph"
+        ><img class="nav-icon" src="images/arrow.png" />
+        mailto:surname-fn@student.national-u.edu.ph</a
+      >
+    </nav>
+
+    <div class="container">
+      <div class="message-section">
+        <label for="student-message"
+          >surname-fn@student.national-u.edu.ph</label
+        >
+        <img
+          id="student-message"
+          class="user-pic"
+          src="images/default-profile.jpg"
+          alt="Student Avatar"
+        />
+
+        <textarea placeholder="Message:"></textarea>
+      </div>
+    </div>
+    <div class="container">
+      <div class="message-section">
+        <label for="teacher-reply">surname-fn@teacher.national-u.edu.ph</label>
+        <img
+          id="teacher-reply"
+          class="user-pic"
+          src="images/default-profile.jpg"
+          alt="Teacher Avatar"
+        />
+        <textarea placeholder="Reply:"></textarea>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: end; margin-right: 80px">
+      <button class="send-btn">
+        <a href="" style="color: #ffcc00; width: 100px">Send</a>
+      </button>
+    </div>
+
+    <footer class="footer">
+      <img src="images/IT.png" style="width: 90px; height: 90px" alt="" />
+      <div>
+        <p>NATIONAL UNIVERSITY - MANILA</p>
+        <p>COLLEGE OF COMPUTING AND INFORMATION TECHNOLOGY</p>
+      </div>
+    </footer>
+  </body>
+</html>
